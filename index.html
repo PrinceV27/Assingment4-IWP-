@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment4 Form</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("tbody").hide();
+  });
+  $("#show").click(function(){
+    $("tbody").show();
+  });
+});
+$(document).ready(function(){
+  $("#Animation").click(function(){
+    $("p").animate({
+      height: 'toggle'
+    });
+  });
+});
+$(document).ready(function(){
+  $("#Fade").click(function(){
+    $("#div1").fadeIn("slow");
+      });
+});
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("h2").append("Fill The Form");
+  });
+
+});
+$(document).ready(function(){
+  $("#btn2").click(function(){
+    $("h2").empty();
+  });
+});
+$(document).ready(function(){
+  $("#btn3").click(function(){
+    $("h1").css({"background-color": "green", "font-size": "200%"});
+  });
+});
+$(document).ready(function(){
+  $("#btn4").click(function(){
+    var txt = "";
+    txt += "Document width/height: " + $(document).width();
+    txt += "x" + $(document).height() + "\n";
+    txt += "Window width/height: " + $(window).width();
+    txt += "x" + $(window).height();
+    alert(txt);
+  });
+});
+$(document).ready(function(){
+  $("#btn5").click(function(){
+    var txt = "";
+    txt += "Width of div: " + $("#div1").width() + "</br>";
+    txt += "Height of div: " + $("#div1").height();
+    $("#div3").html(txt);
+  });
+});
+$(document).ready(function(){
+  $("h2").add("p").css("background-color", "blue");
+});
+$(document).ready(function(){
+  $("#btn6").click(function(){
+    $("tr").each(function(){
+      alert($(this).text())
+    });
+  });
+});
+</script>
+<style>
+	#div3 {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid blue;
+  background-color: lightblue;
+}
+
+</style>
+
+</head>
+
+<body style="background: #4CA1AF; background: linear-gradient(to right, #C4E0E5, #4CA1AF);">
+<form style="font-family: sans-serif; padding-left: 600px;" method="posp" action="">
+<table>
+<thead>
+	<button id="hide">Hide</button>
+    <button id="show">Show</button> 
+    <button id ="Animation">Animation</button>
+    <button id ="Fade">Fade</button>
+    <button id="btn1">Add element</button>
+    <button id="btn2">Remove element</button>
+    <button id ="btn3">multiple css styles</button>
+    <button id ="btn4">Display dimensions of document and window</button>
+    <button id ="btn5">Display dimensions</button>
+    <button id ="btn6">Alert the value of each list item</button>
+
+
+
+
+
+
+	<h1 style="padding-left: 80px;">Registration Form</h1>
+	<h2>Welcome</h2>
+	<p>Fill The Form</p>
+	</thead>
+<tbody>
+	<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div>
+
+	<tr>
+<td><label for="First">First Name:</label></td>
+<td><input id="First" type="text" name="first name" placeholder="First Name" ></td>
+</tr>
+<tr>
+<td><label for="Last Name">Last Name:</label></td>
+<td><input id="Last Name" type="text" name="Last name" placeholder="Last Name" ></td>
+</tr>
+<tr>
+<td><label for="Male">Male</label>
+<input id="Male" type="radio" name="gender" value="Male" >
+</td>
+<td><label for="Female">Female</label>
+	<input id="Female" type="radio" name="gender" value="Female" >
+</td>
+
+</tr>
+<tr>
+	<td><label for="Email">Email:</label></td>
+<td><input id="Email" type="Email" name="Email" placeholder="Your Email" ></td>
+</tr>
+<tr>
+	<td><label for="Password">Password:</label></td>
+<td><input id="Password" type="Password" placeholder="Your Password" pattern=".{5,10}" ></td>
+<tr>
+	<tr>
+	<td><label for="Re-Password">Retype-Password:</label></td>
+<td><input id="Re-Password" type="Password" placeholder="Retype-Password" pattern=".{5,10}" ></td>
+<tr><td><label>
+	Date of Birth:</td>
+	<td><select name="Month" id="Month">
+
+		<option value="0" >Month</option>
+		<option value="1" >January</option>
+		<option value="2" >February</option>
+		<option value="3" >March</option>
+		<option value="4" >April</option>
+		<option value="5" >May</option>
+		<option value="6" >June</option>
+		<option value="7" >July</option>
+		<option value="8" >August</option>
+		<option value="9" >September</option>
+		<option value="10" >October</option>
+		<option value="11" >November</option>
+		<option value="12" >December</option>
+	</select>
+	<select name="Date" id="Date">
+		<option value="0" >Date</option>
+		<option value="1" >1</option>
+		<option value="2" >2</option>
+		<option value="3" >3</option>
+        <option value="4" >4</option>
+		<option value="5" >5</option>
+		<option value="6" >6</option>
+        <option value="7" >7</option>
+		<option value="8" >8</option>
+		<option value="9" >9</option>
+        <option value="10" >10</option>
+		<option value="11" >11</option>
+		<option value="12" >12</option>
+		<option value="13" >13</option>
+		<option value="14" >14</option>
+		<option value="15" >15</option>
+		<option value="16" >16</option>
+		<option value="17" >17</option>
+		<option value="18" >18</option>
+        <option value="19" >19</option>
+		<option value="20" >20</option>
+		<option value="21" >21</option>
+        <option value="22" >22</option>
+		<option value="23" >23</option>
+		<option value="23" >24</option>
+        <option value="25" >25</option>
+		<option value="26" >26</option>
+		<option value="27" >27</option>
+		<option value="28" >28</option>
+		<option value="29" >29</option>
+		<option value="30" >30</option>
+		<option value="31" >31</option>
+	</select>
+	<select name="Year" id="Year">
+		<option value="0" >Year</option>
+		<option value="1" >1999</option>
+		<option value="2" >2000</option>
+		<option value="3" >2001</option>
+		<option value="4" >2002</option>
+		<option value="5" >2003</option>
+		<option value="6" >2004</option>
+		<option value="7" >2005</option>
+	</select>
+</td>
+</td>
+</label>
+</tr>
+<tr>
+<td>	<label for="agreed">I agree to the terms and conditions</label><td>
+	 <input id="agreed" type="checkbox" name="agreed" >
+</tr>
+<p>
+<tr>
+	 <td></td>	
+	<td><button>Reset</button></td>
+</tr>
+<tr>
+   <td></td>
+	<td><button onclick="return radioValidation();">Submit</button></td>
+</tr>
+</p>
+</tbody>
+</table>
+</form>
+<script type="text/javascript">
+function radioValidation(){
+
+        var gender = document.getElementsByName('gender');
+        var chec=document.getElementsByName('agreed');
+        var genValue = false;
+        var hvalue=false;
+        for(var i=0; i<gender.length;i++){
+            if(gender[i].checked == true){
+                genValue = true;    
+            }
+        }
+        if(!genValue){
+            alert("Please Choose the gender");
+            return false;
+    }
+    for(var i=0; i<chec.length;i++){
+            if(chec[i].checked == true){
+                hvalue = true;    
+            }
+        }
+        if(!hvalue){
+            alert("Please Check the checkbox");
+            return false;
+    }
+     if(document.getElementById('Month').value == '0' || document.getElementById('Date').value == '0' || document.getElementById('Year').value == '0'){
+        alert("Please Enter Date of Birth Correctly");
+        return false;
+   }          
+}      
+</script>
+<div id="div3"></div>
+
+</body>
+</html>
